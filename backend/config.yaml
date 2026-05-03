@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  mode: debug
+
+database:
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: ""
+  dbname: youni
+  charset: utf8mb4
+
+jwt:
+  secret: "change-this-to-a-random-secret-key"
+  expire_hours: 24
+
+heartbeat:
+  interval_seconds: 30
+  timeout_seconds: 90

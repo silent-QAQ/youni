@@ -1,0 +1,14 @@
+server:
+  host: "0.0.0.0"
+  port: 9877
+  mode: debug
+
+admin:
+  enabled: true
+  port: 9878
+
+websocket:
+  read_buffer_size: 4096
+  write_buffer_size: 4096
+  ping_interval_seconds: 25
+  pong_timeout_seconds: 60

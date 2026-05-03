@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api 'com.google.code.gson:gson:2.11.0'
+    api 'org.java-websocket:Java-WebSocket:1.5.7'
+    implementation 'org.slf4j:slf4j-api:2.0.13'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Youni Common',
+                   'Implementation-Version': version
+    }
+}

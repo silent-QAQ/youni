@@ -1,0 +1,4 @@
+rootProject.name = 'youni'
+
+include 'common'
+include 'plugin-paper'

@@ -1,0 +1,28 @@
+apply plugin: 'com.github.johnrengelman.shadow'
+
+repositories {
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+    implementation project(':common')
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    archiveBaseName.set('Youni')
+    relocate 'com.google.gson', 'com.youni.lib.gson'
+    relocate 'org.java_websocket', 'com.youni.lib.websocket'
+}
+
+build.dependsOn shadowJar
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Youni Paper Plugin',
+                   'Implementation-Version': version
+    }
+}

@@ -1,0 +1,21 @@
+name: Youni
+version: '1.0.0'
+main: com.youni.paper.YouniPaperPlugin
+api-version: '1.13'
+description: Cross-server social system for Minecraft
+author: Youni Team
+website: https://github.com/youni
+
+commands:
+  youni:
+    description: Youni main command
+    usage: /youni <msg|reply|reload|status>
+    aliases: [yn]
+
+permissions:
+  youni.use:
+    description: Basic Youni usage
+    default: true
+  youni.admin:
+    description: Youni admin commands
+    default: op
